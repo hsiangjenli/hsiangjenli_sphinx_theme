@@ -24,25 +24,23 @@ def package_files(
 
 
 setup(
-    name='pyg_sphinx_theme',
+    name='my_sphinx_theme',
     version=__version__,
-    author='PyG Team',
-    author_email='team@pyg.org',
-    url='https://github.com/pyg-team/pyg_sphinx_theme',
+    author='Hsiang-Jen Li',
     install_requires=[
         'sphinx==5.1.1',
         'sphinx_rtd_theme>=1.0',
     ],
     package_data={
-        'pyg_sphinx_theme': [
+        'my_sphinx_theme': [
             'theme.conf',
-            *package_files('pyg_sphinx_theme/static',
-                           ['css', 'js', 'png', 'svg']),
+            *package_files('my_sphinx_theme/static',
+                           ['css', 'js']),
         ]
     },
     entry_points={
         'sphinx.html_themes': [
-            'pyg_sphinx_theme = pyg_sphinx_theme',
+            'my_sphinx_theme = my_sphinx_theme',
         ]
     },
     packages=find_packages(),
